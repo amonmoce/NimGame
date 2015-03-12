@@ -1,4 +1,4 @@
-#include "GameManager_UI.h"
+#include "GameManager.h"
 
 int main(){
 
@@ -13,5 +13,5 @@ int main(){
   theInterface.start();
 
   return 0;
-  
+
 }

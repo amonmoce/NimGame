@@ -1,16 +1,16 @@
 #ifndef PILE_H
 #define PILE_H
 
-class Pile{ /*
+class Pile{
   private:
-    int size;
+    int numberSticks;
   public:
     Pile();
     Pile(int number);
-    int size();
+    int numberofSticks();
     void setSize (int number );
-    void remove (int number);
-    */
+    //void remove (int number);
+
 };
 
 
