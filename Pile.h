@@ -9,7 +9,7 @@ class Pile{
     Pile(int number);
     int numberofSticks();
     void setSize (int number );
-    //void remove (int number);
+    void remove (int number);
 
 };
 

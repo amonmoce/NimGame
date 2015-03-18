@@ -7,20 +7,20 @@ class GameManager;
 
 class NimUI{
 private:
-  GameManager* myGame;
+  GameManager *myGame;
   int done;
 public:
   NimUI();
-  NimUI(GameManager theGame);
+  NimUI(GameManager *theGame);
   void update (GameManager game);
-  int askPlayerForSticks( int max);
+  int askPlayerForSticks(int max);
   void start ();
   void askPlayAgain ();
   void askSticks ();
   //void reportWinner (string winner);
   //void reportPlay (string player,int taken, int left);
-  void reportNoGame ();
-  void dessineJeuDeNim( int stick );
+  //void reportNoGame ();
+  //void dessineJeuDeNim( int stick );
 };
 
 

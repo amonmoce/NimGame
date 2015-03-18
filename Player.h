@@ -3,6 +3,7 @@
 
 class Player{
   public:
+    const char *playerName;
     Player();
     Player(const char *name);
 };

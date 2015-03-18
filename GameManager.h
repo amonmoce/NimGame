@@ -10,22 +10,23 @@ class NimUI;
 
 class Pile;
 
+class Player;
+
 class GameManager{
 
   friend class NimUI;
 
   private:
-    //Player firstPlayer, secondPlayer;
-    // nextPlayer, previousPlayer;
+    int maximum_to_remove;
+    Player *firstPlayer, *secondPlayer, *nextPlayer, *previousPlayer;
     Pile *thePile;
     NimUI *ui;
 
   public:
-    //static int maximum_to_remove = 3;
     GameManager();
-    GameManager(Player player1, Player player2);
+    GameManager(Player *player1, Player *player2);
     int sticksLeft();
-    int sticksTaken();
+    //int sticksTaken();
     //Player nextPlayer();
   //  Player previousPlayer();
     int gameOver();

@@ -6,9 +6,9 @@ int main(){
 
   Computer player2("Computer");
 
-  GameManager theGame( player1, player2);
+  GameManager theGame( &player1, &player2);
 
-  NimUI theInterface(theGame);
+  NimUI theInterface(&theGame);
 
   theInterface.start();
 

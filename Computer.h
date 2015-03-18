@@ -5,7 +5,7 @@
 
 class Computer: public Player{
   public:
-    Computer() : Player(){}
+    Computer();
     Computer(const char *name);
     //void makeMove (Pile pile, int maximum);
 };
