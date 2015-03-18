@@ -2,12 +2,12 @@ all: compile link clean
 
 compile:
 	g++ -c NimGame.cpp
-	g++ -c Computer.cpp
-	g++ -c GameManager.cpp
-	g++ -c NimUI.cpp
-	g++ -c Pile.cpp
-	g++ -c Player.cpp
-	
+	g++ -c implementation/Computer.cpp
+	g++ -c implementation/GameManager.cpp
+	g++ -c implementation/NimUI.cpp
+	g++ -c implementation/Pile.cpp
+	g++ -c implementation/Player.cpp
+
 link:
 	g++ NimGame.o Computer.o GameManager.o NimUI.o Pile.o Player.o -o NimGame
 

@@ -1,4 +1,4 @@
-#include "NimUI.h"
+#include "../library/NimUI.h"
 #include<iostream>
 using namespace std;
 
