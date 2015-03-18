@@ -12,7 +12,7 @@ private:
 public:
   NimUI();
   NimUI(GameManager *theGame);
-  void update (GameManager game);
+  //void update (GameManager game);
   int askPlayerForSticks(int max);
   void start ();
   void askPlayAgain ();

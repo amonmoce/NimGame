@@ -34,7 +34,7 @@ class GameManager{
     void registration(NimUI *observer);
     void play();
     //void setPileSize (int number);
-    void setNextPlayer(Player player);
+    void setNextPlayer(Player *player);
 
 };
 

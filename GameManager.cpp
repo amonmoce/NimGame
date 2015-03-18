@@ -23,7 +23,7 @@ void GameManager::registration(NimUI *observer){
 }
 
 int GameManager::gameOver(){
-  if(this->thePile->numberofSticks() == 0){
+  if(thePile->numberofSticks() == 0){
     cout<<"GAME OVER"<<endl;
     return 1;
   }
@@ -31,25 +31,35 @@ int GameManager::gameOver(){
 }
 
 int GameManager::sticksLeft(){
-  return this->thePile->numberofSticks();
+  return thePile->numberofSticks();
 }
 
 void GameManager::play(){
   cout<<"Let's start the game now"<<endl;
+
+  nextPlayer = firstPlayer;
   while (!gameOver()){
-      if(typeid(*nextPlayer) == typeid(Computer)){
-        cout<<"Computer plays"<<endl;
-      }
-      else{
-        int number;
-        int max = maximum_to_remove < sticksLeft() ? maximum_to_remove : sticksLeft();
-        
-        while((number = this->ui->askPlayerForSticks(max)) == 0)
-          cout<<"You have to pick between 1 and "<<max<<endl;
-        thePile->remove(number);
-      }
 
-
-
+    //if(typeid(*nextPlayer) == typeid(Computer)){
+    cout<<nextPlayer->playerName<<", your turn!"<<endl;
+    //}
+    //else{
+    int number;
+    int max = maximum_to_remove < sticksLeft() ? maximum_to_remove : sticksLeft();
+    while((number = this->ui->askPlayerForSticks(max)) == 0)
+      cout<<"You have to pick between 1 and "<<max<<endl;
+    thePile->remove(number);
+    setNextPlayer(nextPlayer);
+    if(thePile->numberofSticks() == 0)
+      cout<<nextPlayer->playerName<<" ... YOU WIN!!!"<<endl;
+    //}
   }
+}
+
+void GameManager::setNextPlayer(Player *player){
+  if(player == firstPlayer)
+    nextPlayer = secondPlayer;
+  else if(player == secondPlayer)
+    nextPlayer = firstPlayer;
+
 }

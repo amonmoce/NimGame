@@ -13,4 +13,4 @@ By default, it's `./NimGame` But you can still change it in the Makefile.
 
 ### How to play it
 
-Well, if you don't know the rule, maybe you can make a quick search on the Internet.
+Well, if you don't know the rules, maybe you can make a quick search on the Internet.
