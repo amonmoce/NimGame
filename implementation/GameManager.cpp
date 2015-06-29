@@ -1,5 +1,6 @@
 #include "../library/GameManager.h"
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 GameManager::GameManager(){
@@ -39,7 +40,7 @@ void GameManager::play(){
 
   nextPlayer = firstPlayer;
   while (!gameOver()){
-
+    system("clear");
     //if(typeid(*nextPlayer) == typeid(Computer)){
     cout<<nextPlayer->playerName<<", your turn!"<<endl;
     //}

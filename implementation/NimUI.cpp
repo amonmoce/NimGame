@@ -1,5 +1,6 @@
 #include "../library/NimUI.h"
-#include<iostream>
+#include <iostream>
+#include <cstdlib>
 using namespace std;
 
 NimUI::NimUI(){}
@@ -20,7 +21,9 @@ NimUI::NimUI(GameManager *theGame){
 void NimUI::start(){
   myGame->registration(this);
   while (!this->done) {
+    system("clear");
     askSticks();
+    system("clear");
     myGame->play();
     askPlayAgain();
   }
