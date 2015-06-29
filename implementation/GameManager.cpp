@@ -39,10 +39,14 @@ void GameManager::play(){
   cout<<"Let's start the game now"<<endl;
 
   nextPlayer = firstPlayer;
+  //char stick=219;
   while (!gameOver()){
     system("clear");
+    for(int m=0; m<sticksLeft(); m++){
+      cout<<"| ";
+    }
     //if(typeid(*nextPlayer) == typeid(Computer)){
-    cout<<nextPlayer->playerName<<", your turn!"<<endl;
+    cout<<endl <<nextPlayer->playerName<<", your turn!"<<endl;
     //}
     //else{
     int number;
